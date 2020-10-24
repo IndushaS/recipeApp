@@ -1,37 +1,22 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import React from 'react';
+import './App.css';
+import LoginButton from './components/LoginButton';
+import LogoutButton from './components/LogoutButton';
+import Profile from './components/Profile';
+import { useAuth0 } from '@auth0/auth0-react';
 
-class App extends Component {
-  state = {
-    renderedResponse: "",
-  };
+function App() {
+  const { isLoading } = useAuth0();
 
-  getResponse = async () => {
-    const response = await fetch("/getRecipes");
-    const body = await response.json();
-    if (response.status !== 200) throw Error(body.message);
+  if (isLoading) return <div>Loading...</div>
 
-    return body;
-  };
-
-  componentDidMount() {
-    this.getResponse().then((res) => {
-      const someData = res;
-      this.setState({ renderedResponse: someData });
-    });
-  }
-
-  render() {
-    const { renderedResponse } = this.state;
-
-    return (
-      <div className="App">
-        <h2>Call out to API!</h2>
-        <p>{renderedResponse.express}</p>
-      </div>
-    );
-  }
+  return (
+    <>
+      <LoginButton />
+      <LogoutButton />
+      <Profile />
+    </>
+  );
 }
 
 export default App;
