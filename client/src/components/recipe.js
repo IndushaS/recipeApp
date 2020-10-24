@@ -26,9 +26,10 @@ class Recipe extends Component {
           {this.state.recipes.map((recipe) => (
             <li className="Recipes" key={recipe.idrecipe}>
               <h1>
-                <p>id :{recipe.idrecipe}</p>
-                <p>name : {recipe.recipeName}</p>
-                <p>picture: {recipe.img}</p>
+                <p>ID: {recipe.idrecipe}</p>
+                <p>Recipe Name: {recipe.recipeName}</p>
+                <p>Instructions: {recipe.recipeInstruction}</p>
+                <p className="hello"> hello </p>
               </h1>
             </li>
           ))}
