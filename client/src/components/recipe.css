@@ -1,37 +1,25 @@
 li {
   list-style-type: none;
+  display: block;
+  border-width: 10px;
+  border-bottom: black;
+ 
 }
 p{
   font-size: 23;
-  color: blue;
+  color: black;
 }
 
-*, *:before, *:after {
-  box-sizing: border-box;
-  transition: all 0.5s ease;
-}
+
 
 body {
-  background: linear-gradient(to left, #FF5F6D , #FFC371);
-  font-family: sans-serif;
   margin: 0;
   width: 100vw;
   height: 100vh;
+  
 }
 
-#container {
-  width: 100%;
-  max-width: 400px;
-  background: white;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 
-#container.closed header { cursor: pointer; }
-header { cursor: pointer; }
 
 .header {
   width: 100%;
@@ -40,68 +28,166 @@ header { cursor: pointer; }
   background-image: url(https://3.bp.blogspot.com/-v7vHC8w2AKs/TbbD-X8BhTI/AAAAAAAAAJ4/LCcrwIaMgf0/s1600/Mint+Julep+glass+tools.jpg);
 }
 
-.title {
+
+html {
+  background: #FAF7F2;
+  background-image: url(https://s3.postimg.org/s1n3ji1ur/paper_fibers_2_X.png);
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  
+}
+
+.u-clearfix:before,
+.u-clearfix:after {
+  content: " ";
+  display: block;
+  border-width: 10px;
+  border-bottom: black;
+}
+
+
+
+.key{
+  content: " ";
+  display: block;
+  border-width: 10px;
+  border-bottom: black;
+}
+
+
+.u-clearfix:after {
+  clear: both;
+  content:"";
+  display: block;
+
+  border-width: 10px;
+  border-bottom: black;
+}
+
+.u-clearfix {
+  *zoom: 1;
+  border-width: 10px;
+  border-bottom: black;
+}
+
+.subtle {
+  color: #aaa;
+}
+
+.card-container {
+  content: " ";
+  display: block;
+  border-width: 10px;
+  border-bottom: black;
+  margin: 25px auto 0;
   position: relative;
+  width: 892px;
+  
+}
+
+.card {
+  
+  background-color: #fff;
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 0 5px rgba(75, 75, 75, .07);
   z-index: 1;
-  font-size: 2rem;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin-top: 0px;
 }
 
-#container.closed .title {
-  padding: 40px 20px 10px 20px;
-  margin-top: -87px;
-  color: white;
-  border: none;
+.card-body {
+  display: inline-block;
+  float: left;
+  width: 410px;
 }
 
-.title:before {
-  z-index: -1;
+.card-number {
+  margin-top: 15px;
+}
+
+.card-circle {
+  border: 1px solid #aaa;
+  border-radius: 40%;
+  display: inline-block;
+  line-height: 22px;
+  font-size: 10px;
+  height: 25px;
+  text-align: center;
+  width: 45px;
+}
+
+.card-author {
+  display: block;
+  font-size: 12px;
+  letter-spacing: .5px;
+  margin: 15px 0 0;
+  text-transform: uppercase;
+}
+
+.card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 60px;
+  margin: 10px 0;
+}
+
+.card-description {
+  display: inline-block;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 28px;
+  margin: 10px 0;
+}
+
+.card-read {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 6px;
+  margin: 5px 0 20px;
+  position: relative;
+  text-align: right;
+  text-transform: uppercase;
+}
+.div {
+  display: block;
+  border-width: 10px;
+  border-bottom: black;
+  content:"";
+  clear:both;
+}
+
+.card-read:after {
+  background-color: #b8bddd;
   content: "";
+  display: block;
+  height: 1px;
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
-  opacity: 0;
+  top: 9px;
+  width: 75%;
 }
 
-#container.closed .title:before {
-  opacity: 1;
+.card-tag {
+  float: right;
+  margin: 5px 0 0;
 }
 
-article {
-  padding: 25px 30px;
-  overflow: hidden;
-  max-height: 400px;
-} 
-
-#container.closed article {
-  max-height: 0px;
-  padding: 0 30px;
+.card-media {
+  float: right;
 }
 
-.ingredients {
-  margin: 0px;
-  padding: 0px;
-  margin-bottom: 20px;
-  padding-left: 4px;
-  font-size: 0.9rem;
-}
-
-.ingredients > li {
-  list-style-type: none;
-  display: flex;
-  margin: 4px 0px;
-}
-
-.ingredients > li > .amount {
-  width: 80px;
-  color: #1976D2;
-}
-
-.preperation > div {
-  margin-bottom: 10px;
+.card-shadow {
+  background-color: #fff;
+  box-shadow: 0 2px 25px 2px rgba(0, 0, 0, 1), 0 2px 50px 2px rgba(0, 0, 0, 1), 0 0 100px 3px rgba(0, 0, 0, .25);
+  height: 1px;
+  margin: -1px auto 0;
+  width: 80%;
+  z-index: -1;
+ 
 }
