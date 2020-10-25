@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import "./Recipe.css";
+import AddRecipe from './addRecipe'
+import "./recipe.css";
+import {Route, BrowserRouter as Router, Switch, Link} from 'react-router-dom'
 
 class Recipe extends Component {
   constructor() {
@@ -22,23 +24,34 @@ class Recipe extends Component {
       );
   }
 
+  
   render() {
     return (
-      <div>
-        <ul>
-          {this.state.recipes.map((
-            recipe //iterate through each recipe object in the state array display the id, name and instructions of each recipe
-          ) => (
-            <li className="Recipes" key={recipe.idrecipe}>
-              <h1>
-                <p>id :{recipe.idrecipe}</p>
-                <p>name : {recipe.recipeName}</p>
-                <p>instructions: {recipe.recipeInstruction}</p>
-              </h1>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <Router>
+        <div>
+          <ul>
+            {this.state.recipes.map((
+              recipe //iterate through each recipe object in the state array display the id, name and instructions of each recipe
+            ) => (  
+              <li className="Recipes" key={recipe.idrecipe}>
+              <Link to="/addRecipe" name='hello' instructions='jee;;p'>Edit</Link>
+                {/* <button type = "button" className="btn btn-primary btn-lg" onClick={() => console.log('hello')}>Edit</button> */}
+                <h1>
+                  <p>id :{recipe.idrecipe}</p>
+                  <p>name : {recipe.recipeName}</p>
+                  <p>instructions: {recipe.recipeInstruction}</p>
+                </h1>
+              </li>
+            ))}
+          </ul>
+          <Switch>
+            <Route path="/addRecipe">
+            <AddRecipe />
+          </Route>
+        </Switch>
+        </div>
+      </Router>
+      
     );
   }
 }
