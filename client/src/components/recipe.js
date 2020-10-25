@@ -28,7 +28,7 @@ class Recipe extends Component {
               <h1>
                 <p>id :{recipe.idrecipe}</p>
                 <p>name : {recipe.recipeName}</p>
-                <p>picture: {recipe.img}</p>
+                <p>instructions: {recipe.recipeInstruction}</p>
               </h1>
             </li>
           ))}
