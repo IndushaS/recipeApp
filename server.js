@@ -31,5 +31,17 @@ app.get("/getRecipes", (req, res, next) => {
     res.json(results);
   });
 });
+app.get('/api/addRecipe', (req, res) => {
+  const {idrecipe, recipeName, img, recipeInstruction} = req.query;
+  const Insert_Recipe = "INSERT INTO recipe (idrecipe, recipeName, img, recipeInstruction) VALUES ('" + idrecipe + "','" + recipeName + "','" + img + "','" + recipeInstruction + "')";
+  connection.query(Insert_Recipe, (err, results) => {
+    if (err) {
+      return res.send(err)
+    }
+    else {
+      return res.send('successfully added recipe')
+    }
+  })
+})
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
