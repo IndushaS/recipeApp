@@ -51,7 +51,6 @@ render() {
  )}
   
  }
- 
 
 
 export default Recipe; //Export the recipe component to be used in the main index.js file
