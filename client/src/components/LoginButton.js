@@ -1,7 +1,5 @@
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
-
-
 //Login button component
 
 //If user is not logged in, it shows the login button
@@ -15,6 +13,7 @@ const LoginButton = () => {
         Explore Recipes!
       </button>
     )
+    
   )
 }
 
