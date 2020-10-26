@@ -1,23 +1,20 @@
 import React, { Component } from "react";
-import "./Recipe.css";
+import "./recipe.css";
 
 class Recipe extends Component {
   constructor() {
     super();
     this.state = {
-      recipes: [], // State array to hold recipe objects that are fetched from the database
+      recipes: [],
     };
   }
 
   componentDidMount() {
-    fetch("/getRecipes") //Api call using route from server.js to obtain recipe data
+    fetch("/getRecipes")
       .then((res) => res.json())
       .then((recipes) =>
-        this.setState(
-          { recipes },
-          () =>
-            //inserts data to the state array of the component
-            console.log("recipes fetched...", recipes) //confirm that the recipes were fetched in the console
+        this.setState({ recipes }, () =>
+          console.log("recipes fetched...", recipes)
         )
       );
   }
@@ -26,14 +23,12 @@ class Recipe extends Component {
     return (
       <div>
         <ul>
-          {this.state.recipes.map((
-            recipe //iterate through each recipe object in the state array display the id, name and instructions of each recipe
-          ) => (
+          {this.state.recipes.map((recipe) => (
             <li className="Recipes" key={recipe.idrecipe}>
               <h1>
                 <p>id :{recipe.idrecipe}</p>
                 <p>name : {recipe.recipeName}</p>
-                <p>instructions: {recipe.recipeInstruction}</p>
+                <p>picture: {recipe.img}</p>
               </h1>
             </li>
           ))}
@@ -43,4 +38,4 @@ class Recipe extends Component {
   }
 }
 
-export default Recipe; //Export the recipe component to be used in the main index.js file
+export default Recipe;
