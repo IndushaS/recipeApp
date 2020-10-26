@@ -21,36 +21,26 @@ class Recipe extends Component {
         )
       );
   }
-render() {
-  return (
- <div>
- <div class="card-container">
-  <div class="card u-clearfix">
-    <div class="card-body">
-    <div class="card-border">
-      <ul>
-      {this.state.recipes.map((recipe) => (//iterate through each recipe object in the state array display the id, name and instructions of each recipe
-        <li className="Recipes" key={recipe.idrecipe}> {/* assigning recipe ID as a key */}
-        <h1>
-          <span class="card-number card-circle subtle">ID{recipe.idrecipe}</span> {/* placeholder for recipe ID */}
-          <h2 class="card-title">{recipe.recipeName} </h2>{/* placeholder for recipe name */}
-          <div class="card-read"></div>
-          <span class="card-description subtle"> Instructions:
-          <p>{recipe.recipeInstruction}</p> </span> {/* placeholder for recipe instructions */}
-        </h1>
-        </li>
-      ))}
-    </ul>
-    </div>
-    </div>
-    <img src="https://s15.postimg.cc/temvv7u4r/recipe.jpg" alt="" class="card-media" />
-  </div>
-  <div class="card-shadow"></div>
- </div>
- </div>  
- )}
-  
- }
 
+  render() {
+    return (
+      <div>
+        <ul>
+          {this.state.recipes.map((
+            recipe //iterate through each recipe object in the state array display the id, name and instructions of each recipe
+          ) => (
+            <li className="Recipes" key={recipe.idrecipe}>
+              <h1>
+                <p>id :{recipe.idrecipe}</p>
+                <p>name : {recipe.recipeName}</p>
+                <p>instructions: {recipe.recipeInstruction}</p>
+              </h1>
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
+}
 
 export default Recipe; //Export the recipe component to be used in the main index.js file
