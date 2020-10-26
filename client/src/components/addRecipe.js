@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 
 class addRecipe extends Component {
+  //if the user is editing a current recipe, pass the name and intructions as props
   constructor(props) {
     super(props);
     this.state = {
@@ -10,12 +11,14 @@ class addRecipe extends Component {
     };
   }
 
+  //change target name input field when user types
   handleNameChange = (event) => {
     this.setState({
       name: event.target.value
     });
   }
-  
+    
+  //change target instructions input field when user types
   handleInstructionsChange = (event) => {
     this.setState({
       instructions: event.target.value
@@ -23,7 +26,6 @@ class addRecipe extends Component {
   }
   
   render() {
-    console.log("test", this.state.name);
     return (
       <form>
         <div>

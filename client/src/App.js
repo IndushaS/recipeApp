@@ -13,6 +13,7 @@ function App() {
 
   if (isLoading) return <div>Loading...</div>
 
+  //initialized react router for easy navigation within app and for adding/editing recipes
   return (
     <>
     <LoginButton />
