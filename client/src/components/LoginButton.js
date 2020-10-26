@@ -3,7 +3,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import "./LoginButton.css";
 import headerImage from '../30-Minute-Instant-Pot-Butter-Chicken-7.jpg'
 import logo from '../chefhat.png'
-
+//import the images needed for this page
 //Login button component
 //If user is not logged in, it shows the login button
 const LoginButton = () => {
@@ -11,6 +11,13 @@ const { loginWithRedirect, isAuthenticated } = useAuth0();
 
 return ( 
 !isAuthenticated && (
+  //creates a div component for each section of the page 
+  //includes a container to group all sections of the page
+  //header is the main picture on the left of the page 
+  //subheading is the right half of the page 
+  //logo is the chef's hat image 
+  //intro is the value proposition under the hat 
+  //button will take user to the log in/sign up pages
 <>
 <div class = "container">
 <div ><img className="header" src={headerImage}/></div>
