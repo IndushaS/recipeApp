@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import AddRecipe from './addRecipe'
-import "./recipe.css";
-import {Route, BrowserRouter as Router, Switch, Link} from 'react-router-dom'
+import AddRecipe from "./addRecipe";
+import "./Recipe.css";
+import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 
 class Recipe extends Component {
   constructor() {
@@ -23,6 +24,10 @@ class Recipe extends Component {
         )
       );
   }
+  /*isAuthenticated() {
+    var Authenticated = useAuth0();
+    this.state.isAuthenticated = Authenticated;
+  }*/
 
   //added react route link in this component to open the edit recipe form with prefilled fields
   render() {
@@ -32,9 +37,11 @@ class Recipe extends Component {
           <ul>
             {this.state.recipes.map((
               recipe //iterate through each recipe object in the state array display the id, name and instructions of each recipe
-            ) => (  
+            ) => (
               <li className="Recipes" key={recipe.idrecipe}>
-              <Link to="/addRecipe" name='hello' instructions='jee;;p'>Edit</Link>
+                <Link to="/addRecipe" name="hello" instructions="jee;;p">
+                  Edit
+                </Link>
                 {/* <button type = "button" className="btn btn-primary btn-lg" onClick={() => console.log('hello')}>Edit</button> */}
                 <h1>
                   <p>id :{recipe.idrecipe}</p>
@@ -46,14 +53,12 @@ class Recipe extends Component {
           </ul>
           <Switch>
             <Route path="/addRecipe">
-            <AddRecipe />
-          </Route>
-        </Switch>
+              <AddRecipe />
+            </Route>
+          </Switch>
         </div>
       </Router>
-      
     );
   }
 }
-
 export default Recipe; //Export the recipe component to be used in the main index.js file

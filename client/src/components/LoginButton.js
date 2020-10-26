@@ -1,5 +1,5 @@
-import React from 'react';
-import { useAuth0 } from '@auth0/auth0-react';
+import React from "react";
+import { useAuth0 } from "@auth0/auth0-react";
 //Login button component
 
 //If user is not logged in, it shows the login button
@@ -9,12 +9,15 @@ const LoginButton = () => {
   return (
     !isAuthenticated && (
       //on click button that takes to login page
-      <button type="button" className="btn btn-primary btn-lg" onClick={() => loginWithRedirect()}>
-        Explore Recipes!
+      <button
+        type="button"
+        className="btn btn-primary btn-lg"
+        onClick={() => loginWithRedirect()}
+      >
+        Login
       </button>
     )
-    
-  )
-}
+  );
+};
 
-export default LoginButton
+export default LoginButton;
