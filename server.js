@@ -26,9 +26,9 @@ app.get("/hello", (req, res) => {
 });
 
 app.get("/getRecipes", (req, res, next) => {
-  connection.query("SELECT * FROM recipe", function (error, results, fields) {
-    if (error) throw error;
-    res.json(results);
+  connection.query("SELECT * FROM recipe", function (error, results, fields) { /* query rettrives all the data from recipe table */
+    if (error) throw error; 
+    res.json(results); /* converts the data to JSON */
   });
 });
 
