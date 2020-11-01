@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 var connection = mysql.createConnection({
   host: "35.223.12.195",
   user: "root",
-  password: "",
+  password: "msci342",
   database: "recipeApp",
 });
 connection.connect(function (error) {
