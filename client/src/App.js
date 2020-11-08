@@ -7,9 +7,10 @@ import Recipe from "./components/Recipe";
 import { useAuth0 } from "@auth0/auth0-react";
 import AddRecipe from "./components/addRecipe";
 import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom";
+import Recommendations from "./components/Recommendation";
 
 function App() {
-  const { isLoading, isAuthenticated } = useAuth0();
+  const { isLoading } = useAuth0();
 
   if (isLoading) return <div>Loading...</div>;
 
@@ -30,6 +31,9 @@ function App() {
                 <Link to="/profile">Profile</Link>
               </li>
               <li>
+                <Link to="/recommendation">Recommendation</Link>
+              </li>
+              <li>
                 <Link to="/addRecipe">Add Recipe</Link>
               </li>
             </ul>
@@ -40,6 +44,9 @@ function App() {
           <Switch>
             <Route path="/profile">
               <Profile />
+            </Route>
+            <Route path="/recommendation">
+              <Recommendations />
             </Route>
             <Route path="/addRecipe">
               <AddRecipe />
