@@ -17,14 +17,14 @@ class addRecipe extends Component {
       name: event.target.value
     });
   }
-    
+
   //change target instructions input field when user types
   handleInstructionsChange = (event) => {
     this.setState({
       instructions: event.target.value
     });
   }
-  
+
   render() {
     return (
       <form>
@@ -35,15 +35,15 @@ class addRecipe extends Component {
           <textarea type="text" value={this.props.instructions} onChange={this.handleInstructionsChange}></textarea>
           <button type="button" className="btn btn-danger btn-lg">
             Cancel
-          </button> 
+          </button>
           <button type="button" className="btn btn-success btn-lg">
             Submit
-          </button>       
+          </button>
         </div>
       </form>
     )
   }
-      
+
 }
-  
-  export default addRecipe
+
+export default addRecipe
