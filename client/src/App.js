@@ -4,6 +4,7 @@ import LoginButton from "./components/LoginButton";
 import LogoutButton from "./components/LogoutButton";
 import Profile from "./components/Profile";
 import Recipe from "./components/Recipe";
+import Recommendation from "./components/Recommendation";
 import { useAuth0 } from "@auth0/auth0-react";
 import AddRecipe from "./components/addRecipe";
 import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom";
@@ -30,6 +31,9 @@ function App() {
                 <Link to="/profile">Profile</Link>
               </li>
               <li>
+                <Link to="/recommendation">recommendations</Link>
+              </li>
+              <li>
                 <Link to="/addRecipe">Add Recipe</Link>
               </li>
             </ul>
@@ -40,6 +44,9 @@ function App() {
           <Switch>
             <Route path="/profile">
               <Profile />
+            </Route>
+            <Route path="/recommendation">
+              <Recommendation />
             </Route>
             <Route path="/addRecipe">
               <AddRecipe />

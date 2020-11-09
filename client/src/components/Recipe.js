@@ -66,7 +66,7 @@ const Recipe = () => {
                   xs={{ span: 6 }} sm={{ span: 4 }} md={{ span: 4 }}
                   lg={{ span: 3 }} xl={{ span: 3 }}>
 
-                  <RecipeCard name={recipe.recipeName} id={recipe.idrecipe} instructions={recipe.recipeInstruction} img={recipe.imgUrl} />
+                  <RecipeCard name={recipe.recipeName} id={recipe.idrecipe} instructions={recipe.recipeInstruction} img={recipe.imgURL} ingredients={recipe.ingredients} />
                 </Col>
 
 

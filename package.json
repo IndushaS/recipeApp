@@ -11,10 +11,13 @@
     "antd": "^4.8.0",
     "body-parser": "^1.18.3",
     "bootstrap": "^4.5.3",
+    "collaborative-filter": "^1.0.0-beta.3",
     "express": "^4.16.4",
+    "pure-react-carousel": "^1.27.6",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",
     "react-dom": "^17.0.1",
+    "react-json-pretty": "^2.2.0",
     "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
