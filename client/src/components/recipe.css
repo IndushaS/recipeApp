@@ -1,3 +1,7 @@
+.container {
+  margin-top: 100px;
+}
+
 li {
   list-style-type: none;
   display: block;
@@ -16,10 +20,10 @@ body {
 }
 
 .header {
-  width: 100%;
-  height: 250px;
-  background: center / cover;
-  background-image: url(https://3.bp.blogspot.com/-v7vHC8w2AKs/TbbD-X8BhTI/AAAAAAAAAJ4/LCcrwIaMgf0/s1600/Mint+Julep+glass+tools.jpg);
+  /* width: 100%; */
+  height: 200px;
+  /* background: center / cover;
+  background-image: url(https://3.bp.blogspot.com/-v7vHC8w2AKs/TbbD-X8BhTI/AAAAAAAAAJ4/LCcrwIaMgf0/s1600/Mint+Julep+glass+tools.jpg); */
 }
 
 html {

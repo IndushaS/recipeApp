@@ -31,17 +31,41 @@ app.get("/getRecipes", (req, res, next) => {
     res.json(results);
   });
 });
-app.get('/api/addRecipe', (req, res) => {
-  const {idrecipe, recipeName, img, recipeInstruction} = req.query;
-  const Insert_Recipe = "INSERT INTO recipe (idrecipe, recipeName, img, recipeInstruction) VALUES ('" + idrecipe + "','" + recipeName + "','" + img + "','" + recipeInstruction + "')";
+app.post("/api/addRecipe", (req, res) => {
+  const { recipeName, recipeInstruction, idType, imgUrl } = req.query;
+  const Insert_Recipe =
+    "INSERT INTO `recipeApp`.`recipe` (`recipeName`, `recipeInstruction`, `idType`, `imgUrl`) VALUES (" +
+    recipeName +
+    "," +
+    recipeInstruction +
+    "," +
+    idType +
+    "," +
+    imgUrl +
+    ")";
   connection.query(Insert_Recipe, (err, results) => {
     if (err) {
-      return res.send(err)
+      return res.send(err);
+    } else {
+      return res.send("successfully added recipe");
     }
-    else {
-      return res.send('successfully added recipe')
+  });
+});
+app.post("/api/editRecipe", (req, res) => {
+  const { idrecipe, recipeName, recipeInstruction, idType, imgUrl } = req.query;
+  const Insert_Recipe =
+    "UPDATE `recipeApp`.`recipe` SET `recipeInstruction` = " +
+    recipeInstruction +
+    " WHERE (`idrecipe` = " +
+    idrecipe +
+    ")";
+  connection.query(Insert_Recipe, (err, results) => {
+    if (err) {
+      return res.send(err);
+    } else {
+      return res.send("successfully added recipe");
     }
-  })
-})
+  });
+});
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
