@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ReactBootstrap, { Card, Button, Col, Grid, Panel, FormGroup } from 'react-bootstrap'
+import LikeButton from './RatingButton.js'
 
 
 
@@ -13,8 +14,11 @@ const RecipeCard = (props) => {
                     <Card.Title>{props.name}</Card.Title>
                     <Card.Text>
                         {props.instructions}
+                        <p></p>
+                        <h4>ingredients:</h4>
+                        {props.ingredients}
                     </Card.Text>
-
+                    <LikeButton />
                 </Card.Body>
             </Card>
 
