@@ -1,3 +1,4 @@
+
 import React, { Component } from "react";
 import "./RatingButton.css";
 
@@ -21,3 +22,4 @@ class LikeButton extends Component {
     }
 }
 export default LikeButton
+
