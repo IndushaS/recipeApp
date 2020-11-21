@@ -75,6 +75,48 @@ app.get('/api/created_recipes', (req, res) => {
   })
 })
 
+//API call for like button
+app.get('/api/like_button', (req, res) => {
+  const {  idrecipe, iduser, rating } = req.query;
+  const Like_button = "INSERT INTO `recipeApp`.`user_rating` (`recipe_id`, `user_id`, `rating`) VALUES ('" + idrecipe + "','" + iduser + "','" + rating + "')";
+  connection.query(Like_button, (err, results) => {
+    if (err) {
+      return res.send(err)
+    }
+    else {
+      return res.json(results);
+    }
+  })
+})
+
+//API call for recipe likes
+app.get('/api/recipe_likes', (req, res) => {
+  const { idrecipe } = req.query;
+  const Recipe_Likes = "SELECT user_rating.recipe_id, SUM(user_rating.rating)as total_likes FROM recipeApp.user_rating Group by user_rating.recipe_id Having user_rating.recipe_id =" + idrecipe;
+  connection.query(Recipe_Likes, (err, results) => {
+    if (err) {
+      return res.send(err)
+    }
+    else {
+      return res.json(results);
+    }
+  })
+})
+
+//API call for save button
+app.get('/api/save_button', (req, res) => {
+  const {  iduser, idrecipe } = req.query;
+  const Save_button = "INSERT INTO `recipeApp`.`saved_recipe` (`id_user`, `recipe_saved`) VALUES ('" + iduser + "','" + idrecipe + "')";
+  connection.query(Save_button, (err, results) => {
+    if (err) {
+      return res.send(err)
+    }
+    else {
+      return res.json(results);
+    }
+  })
+})
+
 //request for recommendations
 app.get('/getRecommendations', (req, res) => {
 
