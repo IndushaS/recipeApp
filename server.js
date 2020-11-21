@@ -117,6 +117,20 @@ app.get('/api/save_button', (req, res) => {
   })
 })
 
+//API call for unsave button
+app.get('/api/unsave_button', (req, res) => {
+  const {  iduser, idrecipe } = req.query;
+  const Unsave_button = "DELETE FROM `recipeApp`.`saved_recipe` WHERE (`id_user` =" + iduser + ") and (`recipe_saved` =" + idrecipe + ")";
+  connection.query(Unsave_button, (err, results) => {
+    if (err) {
+      return res.send(err)
+    }
+    else {
+      return res.json(results);
+    }
+  })
+})
+
 //request for recommendations
 app.get('/getRecommendations', (req, res) => {
 
