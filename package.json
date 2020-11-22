@@ -3,11 +3,12 @@
   "name": "recipeapp",
   "version": "1.0.0",
   "scripts": {
-    "predeploy": "yarn dev",
-    "deploy": "gh-pages -d dev",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
     "client": "cd client && yarn start",
     "server": "nodemon server.js",
-    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+    "build":"concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
   },
   "dependencies": {
     "@material-ui/core": "^4.11.0",
