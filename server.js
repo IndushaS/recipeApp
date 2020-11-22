@@ -77,8 +77,8 @@ app.get('/api/created_recipes', (req, res) => {
 
 //API call for like button
 app.get('/api/like_button', (req, res) => {
-  const {  idrecipe, iduser, rating } = req.query;
-  const Like_button = "INSERT INTO `recipeApp`.`user_rating` (`recipe_id`, `user_id`, `rating`) VALUES ('" + idrecipe + "','" + iduser + "','" + rating + "')";
+  const {  idrecipe, iduser } = req.query;
+  const Like_button = "INSERT INTO `recipeApp`.`user_rating` (recipe_id, user_id, rating) VALUES ('" + idrecipe + "','" + iduser + "','1') ON DUPLICATE KEY UPDATE user_rating.rating = '1'";
   connection.query(Like_button, (err, results) => {
     if (err) {
       return res.send(err)
@@ -88,6 +88,21 @@ app.get('/api/like_button', (req, res) => {
     }
   })
 })
+
+//API call for unlike button
+app.get('/api/unlike_button', (req, res) => {
+  const {  idrecipe, iduser } = req.query;
+  const Unlike_button = "INSERT INTO `recipeApp`.`user_rating` (recipe_id, user_id, rating) VALUES ('" + idrecipe + "','" + iduser + "','0') ON DUPLICATE KEY UPDATE user_rating.rating = '0'";
+  connection.query(Unlike_button, (err, results) => {
+    if (err) {
+      return res.send(err)
+    }
+    else {
+      return res.json(results);
+    }
+  })
+})
+
 
 //API call for recipe likes
 app.get('/api/recipe_likes', (req, res) => {
