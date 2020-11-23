@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.507b1a48.chunk.css",
+    "main.js": "/static/js/main.95825058.chunk.js",
+    "main.js.map": "/static/js/main.95825058.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.786b8bbc.js",
+    "runtime-main.js.map": "/static/js/runtime-main.786b8bbc.js.map",
+    "static/css/2.35e3a5d9.chunk.css": "/static/css/2.35e3a5d9.chunk.css",
+    "static/js/2.356a0645.chunk.js": "/static/js/2.356a0645.chunk.js",
+    "static/js/2.356a0645.chunk.js.map": "/static/js/2.356a0645.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.ab4c143fbb228ae19fb35876da7634f4.js": "/precache-manifest.ab4c143fbb228ae19fb35876da7634f4.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.35e3a5d9.chunk.css.map": "/static/css/2.35e3a5d9.chunk.css.map",
+    "static/css/main.507b1a48.chunk.css.map": "/static/css/main.507b1a48.chunk.css.map",
+    "static/js/2.356a0645.chunk.js.LICENSE.txt": "/static/js/2.356a0645.chunk.js.LICENSE.txt",
+    "static/media/30-Minute-Instant-Pot-Butter-Chicken-7.jpg": "/static/media/30-Minute-Instant-Pot-Butter-Chicken-7.d36c05ca.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.786b8bbc.js",
+    "static/css/2.35e3a5d9.chunk.css",
+    "static/js/2.356a0645.chunk.js",
+    "static/css/main.507b1a48.chunk.css",
+    "static/js/main.95825058.chunk.js"
+  ]
+}
