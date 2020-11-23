@@ -19,15 +19,15 @@ function Nav() {
         <li>
           <Link to='/addRecipe'>Add Recipe</Link>
         </li>
-        {/* <li>
+        <li>
           <Link to='/recommendation'>Recommendations</Link>
-        </li> */}
+        </li>
         <li>
           <Link to='/profile'>Profile</Link>
         </li>
-        <li onClick={() => logout()}>
+        {/* <li onClick={() => logout()}>
           <a>Log Out</a>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );

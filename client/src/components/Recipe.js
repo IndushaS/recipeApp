@@ -1,5 +1,4 @@
 import React, { Component, useState, useEffect } from "react";
-import AddRecipe from "./addRecipe";
 import "./recipe.css";
 import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
@@ -15,6 +14,7 @@ import ReactBootstrap, {
   InputGroup,
   FormControl,
 } from "react-bootstrap";
+import zIndex from "@material-ui/core/styles/zIndex";
 
 const Recipe = () => {
   const { user, isAuthenticated } = useAuth0();
@@ -87,12 +87,6 @@ const Recipe = () => {
                 </Col>
               ))}
           </Row>
-
-          <Switch>
-            <Route path='/addRecipe'>
-              <AddRecipe />
-            </Route>
-          </Switch>
         </div>
       </Router>
     )
