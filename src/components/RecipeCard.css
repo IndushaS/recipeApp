@@ -89,3 +89,6 @@ li {
 .modalbody {
   width: 500px !important;
 }
+.img {
+  max-width: 300px;
+}
