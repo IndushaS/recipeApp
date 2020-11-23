@@ -40,7 +40,7 @@ li {
 .viewButton {
   list-style-type: none;
   display: block;
-  width: 700px;
+  width: 400px;
   height: 500px;
   background-color: white !important;
   border-color: lightgrey !important;
@@ -54,7 +54,7 @@ li {
 .btn-primary:hover {
   list-style-type: none;
   display: block;
-  width: 6000px;
+  width: 400px;
   height: 500px;
   background-color: white !important;
   border-color: lightgrey !important;
