@@ -15,7 +15,7 @@ const Recipe = () => {
   const [input, setInput] = useState('');
 
   async function fetchData() {
-    const res = await fetch("/getRecipes");
+    const res = await fetch("https://recipe342backend.herokuapp.com/getrecipes");
     res
       .json()
       .then(res => setRecipes(res))
@@ -67,6 +67,9 @@ const Recipe = () => {
                   lg={{ span: 3 }} xl={{ span: 3 }}>
 
                   <RecipeCard name={recipe.recipeName} id={recipe.idrecipe} instructions={recipe.recipeInstruction} img={recipe.imgURL} ingredients={recipe.ingredients} />
+
+
+
                 </Col>
 
 

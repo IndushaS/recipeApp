@@ -46,7 +46,7 @@ li {
   border-color: lightgrey !important;
   color: black !important;
   border-radius: 5% !important;
-  box-shadow: -0.05rem 2rem 2rem rgba(0, 0, 0, 0.1);
+
   border-width: 10px;
   border-bottom: black;
 }
@@ -54,13 +54,13 @@ li {
 .btn-primary:hover {
   list-style-type: none;
   display: block;
-  width: 700px;
+  width: 6000px;
   height: 500px;
   background-color: white !important;
   border-color: lightgrey !important;
   color: black !important;
   border-radius: 5% !important;
-  box-shadow: -0.5rem 3rem 3rem rgba(0, 0, 0, 0.2);
+
   border-width: 10px;
   border-bottom: black;
 }

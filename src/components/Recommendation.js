@@ -12,7 +12,7 @@ const Recommendations = () => {
 
 
     async function fetchData() {
-        const res = await fetch("/getRecommendations?id=3");
+        const res = await fetch("https://recipe342backend.herokuapp.com/getRecommendations?id=3");
         res
             .json()
             .then(res => setRecommendations(res))
@@ -20,7 +20,7 @@ const Recommendations = () => {
     }
 
     async function getUserid() {
-        const result = await fetch("/getUserid?email=" + user.email);
+        const result = await fetch("https://recipe342backend.herokuapp.com/getUserid?email=indusha999@gmail.com");
         result
             .json()
             .then(result => setId(result))
@@ -36,10 +36,10 @@ const Recommendations = () => {
 
     //If user is logged in, it displays user information
     return (
-        isAuthenticated && (
+        true && (
             <div>
-                <img src={user.picture} alt={user.name} />
-                <h2>Recommendations for {user.name}</h2>
+                <img src={"https://lh3.googleusercontent.com/ogw/ADGmqu90MCDtF1tR1J6YYOvblwW-zp641R_BfzKlpKgrvA=s64-c-mo"} />
+                <h2>Recommendations for indusha</h2>
 
 
                 <span>{JSON.stringify(recommendations)}</span>

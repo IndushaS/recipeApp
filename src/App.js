@@ -15,8 +15,7 @@ function App() {
   //initialized react router for easy navigation within app and for adding/editing recipes
   return (
     <>
-      <LoginButton />
-      <LogoutButton />
+
 
       <Router>
         <div>
