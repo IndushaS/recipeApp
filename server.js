@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 var mysql = require("mysql");
 const app = express();
+
 const port = process.env.PORT || 5000;
 const recommend = require('collaborative-filter');
 
@@ -158,6 +159,8 @@ app.get("/getUserid", (req, res) => {
 });
 
 
-
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
+}
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
