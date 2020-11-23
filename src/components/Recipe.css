@@ -40,7 +40,7 @@ li {
 .viewButton {
   list-style-type: none;
   display: block;
-  width: 400px;
+  width: 600px;
   height: 500px;
   background-color: white !important;
   border-color: lightgrey !important;
@@ -54,19 +54,19 @@ li {
 .btn-primary:hover {
   list-style-type: none;
   display: block;
-  width: 400px;
+  width: 600px;
   height: 500px;
-  background-color: white !important;
-  border-color: lightgrey !important;
-  color: black !important;
-  border-radius: 5% !important;
+  background-color: white;
+  border-color: lightgrey;
+  color: black;
+  border-radius: 5%;
   box-shadow: -0.5rem 3rem 3rem rgba(0, 0, 0, 0.2);
   border-width: 10px;
   border-bottom: black;
 }
 .imgrecipe {
-  width: 250px;
-  height: 200px;
+  width: 250px !important;
+  height: 200px !important;
   border-radius: 5%;
 }
 .img1recipe {
@@ -87,5 +87,5 @@ li {
 }
 
 .modalbody {
-  width: 500px !important;
+  width: 500px;
 }

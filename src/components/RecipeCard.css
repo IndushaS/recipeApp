@@ -40,7 +40,7 @@ li {
 .viewButton {
   list-style-type: none;
   display: block;
-  width: 400px;
+  width: 600px;
   height: 500px;
   background-color: white !important;
   border-color: lightgrey !important;
@@ -54,7 +54,7 @@ li {
 .btn-primary:hover {
   list-style-type: none;
   display: block;
-  width: 400px;
+  width: 600px;
   height: 500px;
   background-color: white !important;
   border-color: lightgrey !important;
@@ -65,8 +65,8 @@ li {
   border-bottom: black;
 }
 .imgrecipe {
-  width: 300px;
-  height: 200px;
+  width: 300px !important;
+  height: 200px !important;
   border-radius: 5%;
 }
 .img1recipe {

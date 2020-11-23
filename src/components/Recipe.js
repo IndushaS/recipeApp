@@ -63,7 +63,7 @@ const Recipe = () => {
               recipe) => (
 
                 <Col
-                  xs={{ span: 3 }} sm={{ span: 3 }} md={{ span: 3 }}
+                  xs={{ span: 6 }} sm={{ span: 4 }} md={{ span: 4 }}
                   lg={{ span: 3 }} xl={{ span: 3 }}>
 
                   <RecipeCard name={recipe.recipeName} id={recipe.idrecipe} instructions={recipe.recipeInstruction} img={recipe.imgURL} ingredients={recipe.ingredients} />
