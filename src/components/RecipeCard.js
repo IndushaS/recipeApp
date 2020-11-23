@@ -32,7 +32,7 @@ const RecipeCard = (props) => {
             <div classname="modalbutton" >
                 <div className="cardLayout">
                     <Button variant="primary" onClick={showModal} className="viewButton">
-                        <img style={{ width: "300px" }} variant="top" className="imgrecipe" src={props.img} /> <p>
+                        <img style={{ display: "none" }} variant="top" className="imgrecipe" src={props.img} /> <p>
 
                         </p>
                         <Modal.Title className="title">{props.name}</Modal.Title>
