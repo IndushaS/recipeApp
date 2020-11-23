@@ -14,7 +14,10 @@ import "./recipecard.css";
 Modal.setAppElement("#root");
 
 const RecipeCard = (props) => {
+  //useState for opening and closing Modal
   const [modalIsOpen, setIsOpen] = React.useState(false);
+
+  //Four use state hooks for activiely changing a recipes name image, instructions and ingredients during edit process
   const [recipeName, setRecipeName] = React.useState(props.name);
   const [reciepInstructions, setRecipeInstructions] = React.useState(
     props.instructions
@@ -24,13 +27,17 @@ const RecipeCard = (props) => {
     props.ingredients
   );
 
+  //function used to close a modal
   function closeModal() {
     setIsOpen(false);
   }
 
+  //function used to open a model
   function openModal() {
     setIsOpen(true);
   }
+
+  //four event handlers that use usestate hooks to take a users feedback and change the text fields
   const handleNameChange = (event) => {
     setRecipeName(event.target.value);
   };
@@ -56,13 +63,14 @@ const RecipeCard = (props) => {
             <h4>ingredients:</h4>
             {props.ingredients}
 
-            {/* edit recipe modal */}
+            {/* Modal componenent created with criteria for opening */}
             <Modal isOpen={modalIsOpen} onRequestClose={closeModal}>
               <form className='hello'>
                 <div className='addRecipeContainer'>
                   <label className='headerTitle'>Edit Recipe</label>
-
                   <label className='recipeTitle'>Image</label>
+
+                  {/* Image preview is responsive to user entering new data */}
                   <img
                     className='recipeImg'
                     src={recipeImage}
@@ -76,6 +84,7 @@ const RecipeCard = (props) => {
                     onChange={handleImageChange}
                   ></input>
 
+                  {/* Edit a recipe name */}
                   <label className='recipeTitle'>Name</label>
                   <input
                     type='text'
@@ -83,6 +92,8 @@ const RecipeCard = (props) => {
                     onChange={handleNameChange}
                     className='recipeName'
                   ></input>
+
+                  {/* Edit a recipe instructions */}
                   <label className='recipeTitle'>Instructions</label>
                   <textarea
                     type='text'
@@ -90,6 +101,8 @@ const RecipeCard = (props) => {
                     onChange={handleInstructionsChange}
                     className='recipeInstructions'
                   ></textarea>
+
+                  {/* Edit a recipe ingredients */}
                   <label className='recipeTitle'>Ingredients</label>
                   <textarea
                     type='text'
@@ -98,6 +111,7 @@ const RecipeCard = (props) => {
                     className='recipeInstructions'
                   ></textarea>
                   <div className='buttons'>
+                    {/* Close button if user presses Cancel */}
                     <button
                       type='button'
                       className='btn btn-danger btn-lg'
@@ -105,6 +119,8 @@ const RecipeCard = (props) => {
                     >
                       Cancel
                     </button>
+
+                    {/* Send data to database, alert user of succssful entry and close modal */}
                     <button
                       type='button'
                       className='btn btn-success btn-lg'

@@ -10,6 +10,7 @@ function Nav() {
   const { logout, isAuthenticated } = useAuth0();
 
   //initialized react router for easy navigation within app and for adding/editing recipes
+  //This navigation componenet will represent all the functionality needed for switching pages
   return (
     <nav>
       <ul className='nav-links'>

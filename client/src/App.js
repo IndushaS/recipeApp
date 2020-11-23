@@ -18,6 +18,7 @@ function App() {
   if (!isAuthenticated) return <LoginButton />;
 
   //initialized react router for easy navigation within app and for adding/editing recipes
+  //Use is Authenticated to only show critical data when a user is signed in
   if (isAuthenticated)
     return (
       <>

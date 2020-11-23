@@ -50,6 +50,7 @@ class addRecipe extends Component {
     });
   };
 
+  //change target image input field when user types
   handleImageChange = (event) => {
     this.setState({
       img: event.target.value,
@@ -57,6 +58,7 @@ class addRecipe extends Component {
     console.log(this.state.img);
   };
 
+  //submit to the database when a user is completed with creating a new recipe. checks if all fields have characters
   submit = () => {
     if (this.state.name && this.state.instructions) {
       alert(`Successfully created recipe ${this.state.name} `);
