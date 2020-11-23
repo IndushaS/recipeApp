@@ -13,6 +13,7 @@ const Recipe = () => {
   const [hasError, setErrors] = useState(false);
   const [recipes, setRecipes] = useState();
   const [input, setInput] = useState('');
+  const [likes, setLikes] = useState([]);
 
   async function fetchData() {
     const res = await fetch("https://recipe342backend.herokuapp.com/getrecipes");
@@ -21,11 +22,20 @@ const Recipe = () => {
       .then(res => setRecipes(res))
       .catch(err => setErrors(err));
   }
+  async function getRating() {
+    const res = await fetch("https://recipe342backend.herokuapp.com/api/recipe_likes");
+    res
+      .json()
+      .then(res => setLikes(res))
+      .catch(err => setErrors(err));
+
+  }
 
 
 
   useEffect(() => {
     fetchData();
+    getRating();
   });
 
   //const updateSearch = (event) => {
@@ -42,6 +52,10 @@ const Recipe = () => {
       return recipe.recipeName.toLowerCase().indexOf(input) !== -1;
     }
   );
+
+  const items = likes.map((i) => {
+    return (i.total_likes)
+  });
 
   return (
 
@@ -60,21 +74,17 @@ const Recipe = () => {
           </div>
           <Row gutter={40}>
             {filteredRecipes && filteredRecipes.map((
-              recipe) => (
+              recipe, index) => (
 
                 <Col
                   xs={{ span: 6 }} sm={{ span: 4 }} md={{ span: 4 }}
                   lg={{ span: 3 }} xl={{ span: 3 }}>
 
-                  <RecipeCard name={recipe.recipeName} id={recipe.idrecipe} instructions={recipe.recipeInstruction} img={recipe.imgURL} ingredients={recipe.ingredients} />
+                  <RecipeCard name={recipe.recipeName} id={recipe.idrecipe} instructions={recipe.recipeInstruction} img={recipe.imgURL} ingredients={recipe.ingredients} likes={items[index]} />
 
 
 
                 </Col>
-
-
-
-
 
               ))}
           </Row>

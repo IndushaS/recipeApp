@@ -8,6 +8,8 @@ import ModalBody from "react-bootstrap/ModalBody";
 import ModalHeader from "react-bootstrap/ModalHeader";
 import ModalFooter from "react-bootstrap/ModalFooter";
 import ModalTitle from "react-bootstrap/ModalTitle";
+import LikeButton from './RatingButton.js'
+import SaveButton from './SaveButton.js'
 
 
 
@@ -36,7 +38,14 @@ const RecipeCard = (props) => {
                     </p>
                     <Modal.Title className="title">{props.name}</Modal.Title>
                     <p> {props.ingredients}</p>
+                    <p><b>Likes: </b>
+                        {props.likes}
+                    </p>
+                    <LikeButton />
+                    <SaveButton />
+
          View Full Recipe  </Button>
+
 
                 <Modal show={isOpen} onHide={hideModal} onEntered={modalLoaded} id="modal"
                 >
