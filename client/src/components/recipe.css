@@ -1,186 +1,100 @@
+
+
+.modalbutton btn-primary{
+  background-color:whitesmoke !important;
+  border-color:black !important;
+}
+.modalbutton btn-primary:hover{
+  background-color: grey !important;
+
+}
 li {
   list-style-type: none;
   display: block;
   border-width: 10px;
   border-bottom: black;
 }
-p {
-  font-size: 23;
-  color: black;
-}
-.Recipes{
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  border: 1px;
-  border: black;
-}
-body {
-  margin: 0;
-  width: 100vw;
-  height: 100vh;
+.modal {
+  position: fixed;
+  display: center!important;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  width:100% !important;
+
 }
 
-.header {
+.modal-main {
+  position:fixed;
+  background: white;
   width: 100%;
-  height: 250px;
-  background: center / cover;
-  background-image: url(https://3.bp.blogspot.com/-v7vHC8w2AKs/TbbD-X8BhTI/AAAAAAAAAJ4/LCcrwIaMgf0/s1600/Mint+Julep+glass+tools.jpg);
+  height: auto;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
 }
 
-html {
-  background: #faf7f2;
-  background-image: url(https://s3.postimg.org/s1n3ji1ur/paper_fibers_2_X.png);
-  box-sizing: border-box;
-  font-family: "Lato", sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-.u-clearfix:before,
-.u-clearfix:after {
-  content: " ";
+.display-block {
   display: block;
+}
+
+.display-none {
+  display: none;
+}
+.viewButton{
+  list-style-type: none;
+  display: block;
+  width: 700px;
+  height: 500px;
+  background-color: white !important;
+  border-color: lightgrey !important;
+  color: black !important;
+  border-radius: 5% !important;
+  box-shadow: -0.05rem 2rem 2rem rgba(0, 0, 0, 0.1);
   border-width: 10px;
   border-bottom: black;
 }
-
-.key {
-  content: " ";
+.viewButton, .btn-primary:hover{
+  list-style-type: none;
   display: block;
+  width: 700px;
+  height: 500px;
+  background-color: white !important;
+  border-color: lightgrey !important;
+  color: black !important;
+  border-radius: 5% !important;
+  box-shadow: -0.5rem 3rem 3rem rgba(0, 0, 0, 0.2);
   border-width: 10px;
   border-bottom: black;
 }
+.imgrecipe{
+  width: 500px;
+  height: 300px;
+  border-radius: 5%;
 
-.u-clearfix:after {
-  clear: both;
-  content: "";
-  display: block;
 
-  border-width: 10px;
-  border-bottom: black;
+
+}
+.img1recipe{
+  width: 400px;
+  height: 200px;
+  border-radius: 5%;
+}
+#example-custom-modal-styling-title{
+  font-size: 70px;
+  
+}
+#modal{
+  width: 800px;
+  height: 600px;
+}
+#buttonhide{
+ display: center;
+ border: none;
+
 }
 
-.u-clearfix {
-  *zoom: 1;
-  border-width: 10px;
-  border-bottom: black;
-}
+.modalbody{
+  width: 500px !important;
 
-.subtle {
-  color: #aaa;
-}
-
-.card-container {
-  content: " ";
-  display: block;
-  border-width: 10px;
-  border-bottom: black;
-  margin: 25px auto 0;
-  position: relative;
-  width: 892px;
-}
-
-.card {
-  background-color: #fff;
-  padding: 30px;
-  position: relative;
-  box-shadow: 0 0 5px rgba(75, 75, 75, 0.07);
-  z-index: 1;
-}
-
-.card-body {
-  display: inline-block;
-  float: left;
-  width: 410px;
-}
-
-.card-number {
-  margin-top: 15px;
-}
-
-.card-circle {
-  border: 1px solid #aaa;
-  border-radius: 40%;
-  display: inline-block;
-  line-height: 22px;
-  font-size: 10px;
-  height: 25px;
-  text-align: center;
-  width: 45px;
-}
-
-.card-author {
-  display: block;
-  font-size: 12px;
-  letter-spacing: 0.5px;
-  margin: 15px 0 0;
-  text-transform: uppercase;
-}
-
-.card-title {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 50px;
-  font-weight: 300;
-  line-height: 60px;
-  margin: 10px 0;
-}
-
-.card-description {
-  display: inline-block;
-  font-weight: 300;
-  font-size: 22px;
-  line-height: 28px;
-  margin: 10px 0;
-}
-
-.card-read {
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 6px;
-  margin: 5px 0 20px;
-  position: relative;
-  text-align: right;
-  text-transform: uppercase;
-}
-.div {
-  display: block;
-  border-width: 10px;
-  border-bottom: black;
-  content: "";
-  clear: both;
-}
-
-.card-read:after {
-  background-color: #b8bddd;
-  content: "";
-  display: block;
-  height: 1px;
-  position: absolute;
-  top: 9px;
-  width: 75%;
-}
-
-.card-tag {
-  float: right;
-  margin: 5px 0 0;
-}
-
-.card-media {
-  float: right;
-}
-
-.card-shadow {
-  background-color: #fff;
-  box-shadow: 0 2px 25px 2px rgba(0, 0, 0, 1), 0 2px 50px 2px rgba(0, 0, 0, 1),
-    0 0 100px 3px rgba(0, 0, 0, 0.25);
-  height: 1px;
-  margin: -1px auto 0;
-  width: 80%;
-  z-index: -1;
 }
