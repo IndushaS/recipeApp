@@ -24,7 +24,7 @@ function Nav() {
                     <Link to='/recommendation'>Recommendations</Link>
                 </li>
                 <li>
-                    <Link to='/profile'>Profile</Link>
+                    <Link to='/profile'>Profil</Link>
                 </li>
                 {/* <li onClick={() => logout()}>
           <a>Log Out</a>
