@@ -11,6 +11,10 @@
   margin: 10px;
 }
 
+/* .break2{
+  width: 100%;
+} */
+
 .heading {
   justify-content: flex-start;
 }
@@ -65,10 +69,12 @@
 
 .carousel1 {
   flex: 2;
+
 }
 
 .carousel2 {
   flex: 2;
+
 }
 
 .left-button {

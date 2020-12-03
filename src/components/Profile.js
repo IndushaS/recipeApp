@@ -71,10 +71,12 @@ const Profile = () => {
                   <Slide index={2}><RecipeCard name={"Tuscan Butter Gnocchi"} id={1} instructions={"Preheat oven to 180°C (160ºC fan). In a large pan over medium heat, melt butter. Add garlic and cook until fragrant, 1 minute. Add cherry tomatoes and season with oregano, salt, pepper, and a pinch of chilli flakes."} img={"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/tuscan-gnocchi-horizontal-2-1536691728.png?crop=0.879xw:0.768xh;0.0629xw,0.133xh&resize=480:*"} ingredients={"Parsley,Butter,Oregano,Salt,Parmesan,Black pepper,Gnocchi,Baby spinch,Basel,Garlic,Cherry tometoes,Mozzarella,Chicken"} /></Slide>
                 </Slider>
                 {/* the buttons that control the slides  */}
-                <ButtonBack type="button4" className="btn btn-warning btn-lg button left-button">{"<"}</ButtonBack>
-                <ButtonNext type="button4" className="btn btn-warning btn-lg button right-button">{">"}</ButtonNext>
+                <ButtonBack style={{ padding: '10px' }} className="save"><i className="fa fa-heart"></i>&nbsp;{"<"}</ButtonBack>
+                <ButtonNext style={{ padding: '10px' }} className="save"><i className="fa fa-heart"></i>&nbsp;{">"}</ButtonNext>
               </CarouselProvider>
             </div>
+            {/* <div class="break2"></div> */}
+
 
             <div class="carousel2">
               {/* the title of the carousel */}
@@ -91,32 +93,33 @@ const Profile = () => {
                 those are built out, stubbing for now. Each slide has an index, starting from 0 */}
                   <Slide index={0}><RecipeCard name={"Tuscan Butter Gnocchi"} id={1} instructions={"Preheat oven to 180°C (160ºC fan). In a large pan over medium heat, melt butter. Add garlic and cook until fragrant, 1 minute. Add cherry tomatoes and season with oregano, salt, pepper, and a pinch of chilli flakes."} img={"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/tuscan-gnocchi-horizontal-2-1536691728.png?crop=0.879xw:0.768xh;0.0629xw,0.133xh&resize=480:*"} ingredients={"Parsley,Butter,Oregano,Salt,Parmesan,Black pepper,Gnocchi,Baby spinch,Basel,Garlic,Cherry tometoes,Mozzarella,Chicken"} /></Slide>
                   <Slide index={1}><RecipeCard name={"Tuscan Butter Gnocchi"} id={1} instructions={"Preheat oven to 180°C (160ºC fan). In a large pan over medium heat, melt butter. Add garlic and cook until fragrant, 1 minute. Add cherry tomatoes and season with oregano, salt, pepper, and a pinch of chilli flakes."} img={"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/tuscan-gnocchi-horizontal-2-1536691728.png?crop=0.879xw:0.768xh;0.0629xw,0.133xh&resize=480:*"} ingredients={"Parsley,Butter,Oregano,Salt,Parmesan,Black pepper,Gnocchi,Baby spinch,Basel,Garlic,Cherry tometoes,Mozzarella,Chicken"} /></Slide>
+                  <Slide index={2}><RecipeCard name={"Tuscan Butter Gnocchi"} id={1} instructions={"Preheat oven to 180°C (160ºC fan). In a large pan over medium heat, melt butter. Add garlic and cook until fragrant, 1 minute. Add cherry tomatoes and season with oregano, salt, pepper, and a pinch of chilli flakes."} img={"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/tuscan-gnocchi-horizontal-2-1536691728.png?crop=0.879xw:0.768xh;0.0629xw,0.133xh&resize=480:*"} ingredients={"Parsley,Butter,Oregano,Salt,Parmesan,Black pepper,Gnocchi,Baby spinch,Basel,Garlic,Cherry tometoes,Mozzarella,Chicken"} /></Slide>
                 </Slider>
                 {/* the buttons that control the slides  */}
-                <ButtonBack type="button4" className="btn btn-warning btn-lg button left-button">{"<"}</ButtonBack>
-                <ButtonNext type="button4" className="btn btn-warning btn-lg button right-button">{">"}</ButtonNext>
+                <ButtonBack style={{ padding: '10px' }} className="save"><i className="fa fa-heart"></i>&nbsp;{"<"}</ButtonBack>
+                <ButtonNext style={{ padding: '10px' }} className="save"><i className="fa fa-heart"></i>&nbsp;{">"}</ButtonNext>
               </CarouselProvider>
             </div>
           </div>
 
           {/* class names for all buttons  */}
-          <div class="button-container">
+          {/* <div class="button-container">
             <Link to="/addRecipe" name="hello" instructions="jee;;p">
               <button type="button1" className="btn btn-warning btn-lg button addrecipe-button" >Add Recipe</button>
             </Link>
           </div>
           <Link to="../App" name="hello" instructions="jee;;p">
             <button type="button2" className="btn btn-warning btn-lg button back-button" >Back</button>
-          </Link>
+          </Link> */}
           {/* grocery button doesn't work yet, there's no page to link to   */}
 
 
         </div>
         <Switch>
           {/* linking to the addrecipe page  */}
-          <Route path="/addRecipe">
+          {/* <Route path="/addRecipe">
             <AddRecipe />
-          </Route>
+          </Route> */}
           <Route path="../App">
             <App />
           </Route>
