@@ -69,7 +69,7 @@ const Recipe = () => {
     true && (
       <Router>
         <div className='recipeContainer'>
-          <div style={{ margin: "20px" }}>
+          <div style={{ margin: "30px" }}>
             <InputGroup size='lg'>
               <InputGroup.Prepend>
                 <InputGroup.Text id='inputGroup-sizing-lg'>
@@ -78,7 +78,7 @@ const Recipe = () => {
               </InputGroup.Prepend>
               <FormControl
                 onChange={onChange}
-                placeholder='enter a recipe name'
+                placeholder='Enter a recipe name'
                 aria-label='Large'
                 aria-describedby='inputGroup-sizing-sm'
               />
