@@ -40,8 +40,8 @@ li {
 .viewButton {
   list-style-type: none;
   display: block;
-  width: 400px;
-  height: 500px;
+  width: 360px;
+  height: 400px;
   background-color: white !important;
   border-color: lightgrey !important;
   color: black !important;
@@ -50,36 +50,35 @@ li {
   border-width: 10px;
   border-bottom: black;
 }
-.viewButton,
-.btn-primary:hover {
+.view1Button {
   list-style-type: none;
   display: block;
-  width: 400px;
-  height: 500px;
-  background-color: white !important;
+  width: 270px;
+  height: 40px;
+  background-color: lightgray !important;
   border-color: lightgrey !important;
   color: black !important;
-  border-radius: 5% !important;
-
+  border-radius: 2% !important;
   border-width: 10px;
   border-bottom: black;
+  text-align: center ;
 }
 .imgrecipe {
-  width: 300px;
-  height: 200px;
+  width: 220px;
+  height: 140px;
   border-radius: 5%;
 }
 .img1recipe {
-  width: 400px;
-  height: 200px;
+  width: 300px;
+  height: 150px;
   border-radius: 5%;
 }
 #example-custom-modal-styling-title {
   font-size: 70px;
 }
 #modal {
-  width: 800px;
-  height: 600px;
+  width: 600px;
+  height: 400px;
 }
 #buttonhide {
   display: center;
@@ -87,5 +86,5 @@ li {
 }
 
 .modalbody {
-  width: 500px !important;
+  width: 300px !important;
 }

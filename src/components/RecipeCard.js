@@ -32,9 +32,8 @@ const RecipeCard = (props) => {
     return (
         <>
             <div classname="modalbutton" >
-                <Button variant="primary" onClick={showModal} className="viewButton">
+                <Button variant="primary1"  className="viewButton">
                     <img variant="top" className="imgrecipe" src={props.img} /> <p>
-
                     </p>
                     <Modal.Title className="title">{props.name}</Modal.Title>
                     <p> {props.ingredients}</p>
@@ -43,9 +42,11 @@ const RecipeCard = (props) => {
                     </p>
                     <LikeButton />
                     <SaveButton />
-
-         View Full Recipe  </Button>
-
+                    <Button variant="primary" className="view1Button" onClick={showModal}>
+         View Full Recipe 
+         </Button>
+         </Button>
+       
 
                 <Modal show={isOpen} onHide={hideModal} onEntered={modalLoaded} id="modal"
                 >
@@ -64,7 +65,10 @@ const RecipeCard = (props) => {
                     </Modal.Body>
                     <button onClick={hideModal} id="buttonhide" >Hide</button>
                 </Modal>
+                
             </div>
+           
+        
         </>
     );
 }

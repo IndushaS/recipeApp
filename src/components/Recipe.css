@@ -1,5 +1,5 @@
 .recipeContainer {
-  padding-top: 120px;
+  padding-top: 80px;
 }
 
 .modalbutton btn-primary {
@@ -9,6 +9,7 @@
 .modalbutton btn-primary:hover {
   background-color: grey !important;
 }
+
 li {
   list-style-type: none;
   display: block;
@@ -23,7 +24,9 @@ li {
   background: rgba(0, 0, 0, 0.6);
   width: 100% !important;
 }
-
+p{
+  font-size: 15px;
+}
 .modal-main {
   position: fixed;
   background: white;
@@ -44,7 +47,7 @@ li {
 .viewButton {
   list-style-type: none;
   display: block;
-  width: 400px;
+  width: 350px;
   height: 500px;
   background-color: white !important;
   border-color: lightgrey !important;
@@ -53,37 +56,56 @@ li {
   box-shadow: -0.05rem 2rem 2rem rgba(0, 0, 0, 0.1);
   border-width: 10px;
   border-bottom: black;
+  padding-bottom: 30px;
+  padding-top: 30px;
+
+
 }
-.viewButton,
-.btn-primary:hover {
+
+.view1Button {
   list-style-type: none;
   display: block;
-  width: 400px;
-  height: 500px;
+  width: 150px;
+  height: 40px;
   background-color: white !important;
   border-color: lightgrey !important;
-  color: black !important;
+  color: white !important;
   border-radius: 5% !important;
-  box-shadow: -0.5rem 3rem 3rem rgba(0, 0, 0, 0.2);
+  box-shadow: -0.05rem 2rem 2rem rgba(0, 0, 0, 0.1);
   border-width: 10px;
   border-bottom: black;
+  text-align: center;
+
+}
+.view1Button {
+  list-style-type: none;
+  display: block;
+  width: 200px;
+  height: 40px;
+  background-color: #eb9d91 !important;
+  border-color: lightgrey !important;
+  color: rgb(99, 146, 185);
+  border-radius: 2% !important;
+  border-width: 10px;
+  border-bottom: black;
+  text-align: center ;
 }
 .imgrecipe {
-  width: 300px;
-  height: 200px;
+  width: 250px;
+  height: 150px;
   border-radius: 5%;
 }
 .img1recipe {
-  width: 400px;
-  height: 200px;
+  width: 250px;
+  height: 150px;
   border-radius: 5%;
 }
 #example-custom-modal-styling-title {
   font-size: 70px;
 }
 #modal {
-  width: 800px;
-  height: 600px;
+  width: 600px;
+  height: 500px;
 }
 #buttonhide {
   display: center;
@@ -91,5 +113,5 @@ li {
 }
 
 .modalbody {
-  width: 500px !important;
+  width: 350px !important;
 }
