@@ -75,6 +75,8 @@ const Profile = () => {
                 <ButtonNext style={{ padding: '10px' }} className="save"><i className="fa fa-heart"></i>&nbsp;{">"}</ButtonNext>
               </CarouselProvider>
             </div>
+            {/* <div class="break2"></div> */}
+
 
             <div class="carousel2">
               {/* the title of the carousel */}
@@ -91,6 +93,7 @@ const Profile = () => {
                 those are built out, stubbing for now. Each slide has an index, starting from 0 */}
                   <Slide index={0}><RecipeCard name={"Tuscan Butter Gnocchi"} id={1} instructions={"Preheat oven to 180°C (160ºC fan). In a large pan over medium heat, melt butter. Add garlic and cook until fragrant, 1 minute. Add cherry tomatoes and season with oregano, salt, pepper, and a pinch of chilli flakes."} img={"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/tuscan-gnocchi-horizontal-2-1536691728.png?crop=0.879xw:0.768xh;0.0629xw,0.133xh&resize=480:*"} ingredients={"Parsley,Butter,Oregano,Salt,Parmesan,Black pepper,Gnocchi,Baby spinch,Basel,Garlic,Cherry tometoes,Mozzarella,Chicken"} /></Slide>
                   <Slide index={1}><RecipeCard name={"Tuscan Butter Gnocchi"} id={1} instructions={"Preheat oven to 180°C (160ºC fan). In a large pan over medium heat, melt butter. Add garlic and cook until fragrant, 1 minute. Add cherry tomatoes and season with oregano, salt, pepper, and a pinch of chilli flakes."} img={"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/tuscan-gnocchi-horizontal-2-1536691728.png?crop=0.879xw:0.768xh;0.0629xw,0.133xh&resize=480:*"} ingredients={"Parsley,Butter,Oregano,Salt,Parmesan,Black pepper,Gnocchi,Baby spinch,Basel,Garlic,Cherry tometoes,Mozzarella,Chicken"} /></Slide>
+                  <Slide index={2}><RecipeCard name={"Tuscan Butter Gnocchi"} id={1} instructions={"Preheat oven to 180°C (160ºC fan). In a large pan over medium heat, melt butter. Add garlic and cook until fragrant, 1 minute. Add cherry tomatoes and season with oregano, salt, pepper, and a pinch of chilli flakes."} img={"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/tuscan-gnocchi-horizontal-2-1536691728.png?crop=0.879xw:0.768xh;0.0629xw,0.133xh&resize=480:*"} ingredients={"Parsley,Butter,Oregano,Salt,Parmesan,Black pepper,Gnocchi,Baby spinch,Basel,Garlic,Cherry tometoes,Mozzarella,Chicken"} /></Slide>
                 </Slider>
                 {/* the buttons that control the slides  */}
                 <ButtonBack style={{ padding: '10px' }} className="save"><i className="fa fa-heart"></i>&nbsp;{"<"}</ButtonBack>
