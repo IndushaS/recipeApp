@@ -1,3 +1,7 @@
+.recipeContainer {
+  padding-top: 120px;
+}
+
 .modalbutton btn-primary {
   background-color: whitesmoke !important;
   border-color: black !important;
