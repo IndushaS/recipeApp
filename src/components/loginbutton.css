@@ -1,0 +1,82 @@
+/* using the flexbox technique to create the grid */
+.container {
+  display: flex;
+}
+
+/* styling for the right half of the page */
+.subheading {
+  height: 100vh;
+  width: 100%;
+  /* pushes to the right end */
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+}
+
+/* styling for the left image of the page  */
+.header {
+  flex: 4;
+  height: 100vh;
+  width: auto;
+  filter: brightness(60%);
+  background-color: #04041b;
+}
+
+/* height for the chefs hat  */
+.logo {
+  flex: 1;
+  margin: 40px 190px 0 0;
+  height: 30vh;
+  width: auto;
+}
+
+/* positioning for the value proposition */
+.intro {
+  flex: 2;
+  margin: 150px 30px 0 0;
+}
+
+/* sizing the button on the page  */
+.button {
+  flex: 1;
+  margin: 100px;
+  width: 400px;
+}
+
+.container {
+  display: flex;
+}
+
+.subheading {
+  height: 100vh;
+  width: 100%;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  flex: 4;
+  height: 100vh;
+  width: auto;
+  filter: brightness(60%);
+  background-color: #04041b;
+}
+
+.logo {
+  flex: 1;
+  margin: 40px 190px 0 0;
+  height: 30vh;
+  width: auto;
+}
+
+.intro {
+  flex: 2;
+  margin: 150px 30px 0 0;
+}
+
+.button {
+  flex: 1;
+  margin: 100px;
+  width: 400px;
+}
