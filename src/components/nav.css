@@ -30,7 +30,7 @@ nav {
 
 nav a {
   color: white;
-  font-size: 18px;
+  font-size: 30px;
   font-weight: 500;
   margin: 50px;
   cursor: pointer;
@@ -40,6 +40,7 @@ nav a:hover {
   color: rgb(99, 146, 185);
   text-decoration: none;
 }
+
 nav li:hover {
   color: rgb(99, 146, 185);
   text-decoration: none;

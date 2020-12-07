@@ -1,0 +1,18 @@
+.intro {
+      flex: 2;
+      top: 10%;
+      left: 30%;
+      position: absolute;
+      margin: 150px 30px 0 0;
+  }
+
+  .land_bkg {
+    flex: 1;
+    margin: 40px 190px 0 0;
+    height: 30vh;
+    width: auto;
+    top: 30%;
+    left: 35%;
+    position: absolute;
+    }
+
