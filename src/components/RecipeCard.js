@@ -17,6 +17,7 @@ import SaveButton from './SaveButton.js'
 const RecipeCard = (props) => {
     const [isOpen, setIsOpen] = React.useState(false);
     const [title, setTitle] = React.useState("Transitioning...");
+    const [countLike, setLike] = React.useState(0)
 
     const showModal = () => {
         setIsOpen(true);
@@ -32,21 +33,21 @@ const RecipeCard = (props) => {
     return (
         <>
             <div classname="modalbutton" >
-                <Button variant="primary1"  className="viewButton">
+                <Button variant="primary1" className="viewButton">
                     <img variant="top" className="imgrecipe" src={props.img} /> <p>
                     </p>
                     <Modal.Title className="title">{props.name}</Modal.Title>
-                    <p> {props.ingredients}</p>
-                    <p><b>Likes: </b>
-                        {props.likes}
-                    </p>
-                    <LikeButton />
+                    <div >
+                        <p>{props.ingredients}</p>
+                    </div>
+                    <p><b>Likes:</b>{props.numLikes + countLike}</p>
+                    <LikeButton liked={props.likeStatus} increment={() => setLike(countLike + 1)} decrement={() => setLike(countLike - 1)} totalLikes={props.numLikes + countLike} idrecipe={props.id} />
                     <SaveButton />
                     <Button variant="primary" className="view1Button" onClick={showModal}>
-         View Full Recipe 
+                        View Full Recipe
          </Button>
-         </Button>
-       
+                </Button>
+
 
                 <Modal show={isOpen} onHide={hideModal} onEntered={modalLoaded} id="modal"
                 >
@@ -60,15 +61,15 @@ const RecipeCard = (props) => {
 
                         <p> {props.ingredients}</p>
                         <h1>  Instructions </h1>
-                        <p>           {props.instructions}</p>
+                        <p> {props.instructions}</p>
 
                     </Modal.Body>
                     <button onClick={hideModal} id="buttonhide" >Hide</button>
                 </Modal>
-                
+
             </div>
-           
-        
+
+
         </>
     );
 }

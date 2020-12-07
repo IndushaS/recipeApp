@@ -61,7 +61,7 @@ li {
   border-radius: 2% !important;
   border-width: 10px;
   border-bottom: black;
-  text-align: center ;
+  text-align: center;
 }
 .imgrecipe {
   width: 220px;
@@ -87,4 +87,8 @@ li {
 
 .modalbody {
   width: 300px !important;
+}
+p {
+  word-break: break-all;
+  white-space: normal;
 }
