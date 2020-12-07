@@ -69,7 +69,6 @@ const RecipeCard = (props) => {
               >
                 View Full Recipe
               </Button>
-              e
             </>
           )}
         </Button>
