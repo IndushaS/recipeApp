@@ -8,6 +8,7 @@ class About extends Component {
     return (
       <div>
         <div className="intro"><h1>Start cooking with PocketChef!</h1></div>
+        <p>This is a new platform to discover awesome recipes, made by Bhoomika, Defne, Hamza, Josh, Indusha, Nayab, Nimisha</p>
         <img className="land_bkg" src={logo} />
       </div>
     )
