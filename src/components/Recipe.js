@@ -101,6 +101,7 @@ const Recipe = () => {
                     img={recipe.imgURL}
                     ingredients={recipe.ingredients}
                     likes={items[index]}
+                    preview={false}
                   />
                 </Col>
               ))}
