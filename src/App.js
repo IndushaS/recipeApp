@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import LoginButton from "./components/LoginButton";
 import LogoutButton from "./components/LogoutButton";
+import About from "./components/about";
 import Profile from "./components/Profile";
 import Recipe from "./components/Recipe";
 import Recommendation from "./components/Recommendation";
@@ -32,6 +33,7 @@ function App() {
         <Router>
           <div>
             <Nav />
+            <Route path='/about' component={About} />
             <Route path='/profile' component={Profile} />
             <Route path='/addRecipe' component={AddRecipe} />
             <Route path='/home' component={Recipe} />

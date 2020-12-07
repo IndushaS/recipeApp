@@ -15,10 +15,6 @@ export default (state = initState, action) => {
         savedRecipe: [...state.savedRecipe, action.payload],
       };
 
-    // case UNSAVE_RECIPE:
-    //   return {
-    //     savedRecipe: action.data,
-    //   };
     case ADD_RECIPE:
       return {
         ...state,

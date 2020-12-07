@@ -16,16 +16,16 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 10vh;
+  min-height: 10px;
   color: white;
-  background: rgb(53, 104, 128);
+  background: #4285f4;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  padding-top: 30px;
+  padding-top: 22px;
   z-index: 10;
-  box-shadow: 0 0 25px 0 black;
+  box-shadow: 0 0 15px 0 black;
 }
 
 nav a {
@@ -40,6 +40,7 @@ nav a:hover {
   color: rgb(99, 146, 185);
   text-decoration: none;
 }
+
 nav li:hover {
   color: rgb(99, 146, 185);
   text-decoration: none;

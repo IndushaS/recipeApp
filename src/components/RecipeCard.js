@@ -21,6 +21,7 @@ import SaveButton from "./SaveButton.js";
 const RecipeCard = (props) => {
   const [isOpen, setIsOpen] = React.useState(false);
   const [title, setTitle] = React.useState("Transitioning...");
+  const [countLike, setLike] = React.useState(0);
 
   const showModal = () => {
     setIsOpen(true);
@@ -36,24 +37,39 @@ const RecipeCard = (props) => {
   return (
     <>
       <div classname='modalbutton'>
-        <Button variant='primary' onClick={showModal} className='viewButton'>
+        <Button variant='primary1' className='viewButton'>
           <img variant='top' className='imgrecipe' src={props.img} /> <p></p>
           <Modal.Title className='title'>{props.name}</Modal.Title>
-          <p> {props.ingredients}</p>
+          <div>
+            <p>{props.ingredients}</p>
+          </div>
           {!props.preview && (
             <>
               <p>
-                <b>Likes: </b>
-                {props.likes}
+                <b>Likes:</b>
+                {props.numLikes + countLike}
               </p>
-              <LikeButton />
+              <LikeButton
+                liked={props.likeStatus}
+                increment={() => setLike(countLike + 1)}
+                decrement={() => setLike(countLike - 1)}
+                totalLikes={props.numLikes + countLike}
+                idrecipe={props.id}
+              />
               <SaveButton
                 name={props.name}
                 img={props.img}
                 ingredients={props.ingredients}
                 instructions={props.instructions}
               />
-              View Full Recipe{" "}
+              <Button
+                variant='primary'
+                className='view1Button'
+                onClick={showModal}
+              >
+                View Full Recipe
+              </Button>
+              e
             </>
           )}
         </Button>
