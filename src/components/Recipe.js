@@ -32,19 +32,19 @@ const Recipe = () => {
       .then((res) => setRecipes(res))
       .catch((err) => setErrors(err));
   }
-  /* async function getRating() {
-     const res = await fetch(
-       "https://recipe342backend.herokuapp.com/api/recipe_likes"
-     );
-     res
-       .json()
-       .then((res) => setLikes(res))
-       .catch((err) => setErrors(err));
-   }
- */
+  // async function getRating() {
+  //   const res = await fetch(
+  //     "https://recipe342backend.herokuapp.com/api/recipe_likes"
+  //   );
+  //   res
+  //     .json()
+  //     .then((res) => setLikes(res))
+  //     .catch((err) => setErrors(err));
+  // }
+
   useEffect(() => {
     fetchData();
-    //getRating();
+    // getRating();
   });
 
   //const updateSearch = (event) => {
@@ -61,9 +61,9 @@ const Recipe = () => {
       return recipe.recipeName.toLowerCase().indexOf(input) !== -1;
     });
 
-  /* const items = likes.map((i) => {
-     return i.total_likes;
-   });*/
+  // const items = likes.map((i) => {
+  //   return i.total_likes;
+  // });
 
   return (
     true && (
@@ -102,6 +102,7 @@ const Recipe = () => {
                     ingredients={recipe.ingredients}
                     numLikes={recipe.totalLikes}
                     likeStatus={recipe.likedStatus}
+                    preview={false}
                   />
                 </Col>
               ))}

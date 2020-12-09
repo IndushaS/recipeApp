@@ -3,27 +3,9 @@ import "./addRecipe.css";
 import Form from "react-bootstrap/Button";
 import Button from "react-bootstrap/Button";
 import add from "../assets/addImage.png";
-import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom";
-
-function handleSubmit(event) {
-  event.preventDefault();
-  fetch("/api/addRecipe", {
-    method: "POST",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      recipeName: "name",
-      recipeInstruction: "instructions",
-      idType: "1",
-      imgUrl: " ",
-    }),
-  })
-    .then((res) => res.json())
-    .then((data) => console.log(data))
-    .catch((err) => console.log(err));
-}
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
+import { addNewRecipe } from "../store/actions/recipeActions";
 
 class addRecipe extends Component {
   //if the user is editing a current recipe, pass the name and intructions as props
@@ -50,16 +32,31 @@ class addRecipe extends Component {
     });
   };
 
+  handleIngredientsChange = (event) => {
+    this.setState({
+      ingredients: event.target.value,
+    });
+    console.log("ingredients" + this.state.ingredients);
+  };
+
   //change target image input field when user types
   handleImageChange = (event) => {
     this.setState({
       img: event.target.value,
     });
-    console.log(this.state.img);
   };
 
   //submit to the database when a user is completed with creating a new recipe. checks if all fields have characters
   submit = () => {
+    const data = {
+      name: this.state.name,
+      img: this.state.img,
+      ingredients: this.state.ingredients,
+      instructions: this.state.instructions,
+    };
+
+    this.props.addNewRecipe(data);
+
     if (this.state.name && this.state.instructions) {
       alert(`Successfully created recipe ${this.state.name}`);
     } else {
@@ -104,8 +101,8 @@ class addRecipe extends Component {
           <label className='recipeTitle'>Ingredients</label>
           <textarea
             type='text'
-            value={this.props.instructions}
-            onChange={this.handleInstructionsChange}
+            value={this.props.ingredients}
+            onChange={this.handleIngredientsChange}
             className='recipeInstructions'
           ></textarea>
           <div className='buttons'>
@@ -126,4 +123,8 @@ class addRecipe extends Component {
   }
 }
 
-export default addRecipe;
+function matchDispatchToProps(dispatch) {
+  return bindActionCreators({ addNewRecipe: addNewRecipe }, dispatch);
+}
+
+export default connect(null, matchDispatchToProps)(addRecipe);
