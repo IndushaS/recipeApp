@@ -48,9 +48,10 @@ app.get("/getRecipes", (req, res, next) => {
     });
 });
 
+//API call for Add Recipe to recipe table
 app.get('/api/addRecipe', (req, res) => {
-    const { idrecipe, recipeName, imgURL, recipeInstruction } = req.query;
-    const Insert_Recipe = "INSERT INTO recipe (idrecipe, recipeName, imgURL, recipeInstruction) VALUES ('" + idrecipe + "','" + recipeName + "','" + imgURL + "','" + recipeInstruction + "')";
+    const { recipeName, recipeInstruction, idType, imgURL,  iduser } = req.query;
+    const Insert_Recipe = "INSERT INTO recipeApp.recipe (recipeName, recipeInstruction, idType, imgURL, madeby) VALUES ('" + recipeName + "','" + recipeInstruction + "', '" + idType + "','" + imgURL + "', '" + iduser + "')";
     connection.query(Insert_Recipe, (err, results) => {
         if (err) {
             return res.send(err)
@@ -61,7 +62,8 @@ app.get('/api/addRecipe', (req, res) => {
     })
 })
 
-//API call for saved recipes
+
+//API call for saved recipes on profile page
 app.get('/api/saved_recipes', (req, res) => {
     const { iduser } = req.query;
     const Saved_Recipes = "Select recipe.recipeName as recipeName, recipe.imgURL as image From recipeApp.saved_recipe Join recipeApp.user On saved_recipe.id_user = user.iduser Join recipeApp.recipe On saved_recipe.recipe_saved = recipe.idrecipe Where iduser =" + iduser;
@@ -75,10 +77,10 @@ app.get('/api/saved_recipes', (req, res) => {
     })
 })
 
-//API call for created recipes
+//API call for created recipes on profile UPDATED
 app.get('/api/created_recipes', (req, res) => {
     const { iduser } = req.query;
-    const Created_Recipes = "Select recipe.recipeName as recipeName, recipe.imgURL as image From recipeApp.created_recipe Join recipeApp.user On created_recipe.userid = user.iduser Join recipeApp.recipe On created_recipe.recipe_created = recipe.idrecipe Where iduser =" + iduser;
+    const Created_Recipes = "Select recipe.recipeName as recipeName, recipe.imgURL as image From recipeApp.recipe Where recipe.madeby =" + iduser;
     connection.query(Created_Recipes, (err, results) => {
         if (err) {
             return res.send(err)
@@ -88,6 +90,7 @@ app.get('/api/created_recipes', (req, res) => {
         }
     })
 })
+
 
 //request for recommendations
 app.get('/getRecommendations', (req, res) => {
